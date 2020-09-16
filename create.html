@@ -1,0 +1,294 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="form-horizontal">
+            <br>
+            <!---@Html.ValidationSummary(true, "", new { @class = "text-danger" })--->
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <input type="number" maxlength="10" class = "form-control" >
+                        <!---@Html.LabelFor(model => model.PS01001)--->
+                        <!---@Html.TextBoxFor(model => model.PS01001, htmlAttributes: new {@maxlength="10", @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01001, "", new { @class = "text-danger" })--->
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="date" class = "form-control" >
+                        <!---@Html.LabelFor(model => model.PS01006)--->
+                        <!---@Html.TextBoxFor(model => model.PS01006, htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01006, "", new { @class = "text-danger" })--->
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="date" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01007)--->
+                        <!---@Html.TextBoxFor(model => model.PS01007, htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01007, "", new { @class = "text-danger" })--->
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="date" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01008)--->
+                        <!---@Html.TextBoxFor(model => model.PS01008, htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01008, "", new { @class = "text-danger" })--->
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group" class = "form-control">
+                        <!---@Html.Label("CS Person")--->
+                        <!---@Html.DropDownListFor(model => model.PS01013, new SelectList(Model.CSPerson, "Value", "Text"),
+                        "--Select--", htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01013, "", new { @class = "text-danger" })--->
+                        <input type="text">
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <!---@Html.Label("Procurement Person")--->
+                        <!---@Html.DropDownListFor(model => model.PS01014, new SelectList(Model.ProcurePerson, "Value", "Text"),
+                        "--Select--", htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01014, "", new { @class = "text-danger" })--->
+                        <input type="text" class = "form-control">
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <!---@Html.Label("Sales Person")--->
+                        <!---@Html.DropDownListFor(model => model.PS01012, new SelectList(Model.SalesPerson, "Value", "Text"),
+                        "--Select--", htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01012, "", new { @class = "text-danger" })--->
+                        <input type="text" class = "form-control">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <!---@Html.Label("Team Lead")--->
+                        <!---@Html.DropDownListFor(model => model.PS01015, new SelectList(Model.TeamLead, "Value", "Text"),
+                        "--Select--", htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01015, "", new { @class = "text-danger" })--->
+                        <input type="text" class = "form-control">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control">
+                        <input type="text" class = "form-control">
+                        <input type="text" class = "form-control">
+                        <input type="text" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01030)--->
+                        <!---@Html.HiddenFor(model => model.PS01003)--->
+                        <!---@Html.EditorFor(model => model.PS01030, new { htmlAttributes = new { @class = "form-control", maxlength
+                        = 40 } })--->
+                        <!---@Html.TextBoxFor(model => model.PS01030, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.TextBoxFor(model => model.PS01031, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.TextBoxFor(model => model.PS01032, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.TextBoxFor(model => model.PS01033, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control">
+                        <input type="text" class = "form-control">
+                        <input type="text" class = "form-control">
+                        <input type="text" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01034)--->
+                        <!---@Html.HiddenFor(model => model.PS01004)--->
+                        <!---@Html.EditorFor(model => model.PS01034, new { htmlAttributes = new { @class = "form-control", maxlength
+                        = 40 } })--->
+                        <!---@Html.TextBoxFor(model => model.PS01034, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.TextBoxFor(model => model.PS01035, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.TextBoxFor(model => model.PS01036, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.TextBoxFor(model => model.PS01037, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control">
+                        <input type="text" class = "form-control">
+                        <input type="text" class = "form-control">
+                        <input type="text" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01023)--->
+                        <!---@Html.HiddenFor(model => model.PS01005)--->
+                        <!---@Html.EditorFor(model => model.PS01023, new { htmlAttributes = new { @class = "form-control", maxlength
+                        = 40 } })--->
+                        <!---@Html.TextBoxFor(model => model.PS01023, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.TextBoxFor(model => model.PS01024, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.TextBoxFor(model => model.PS01025, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.TextBoxFor(model => model.PS01026, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <select class = "form-control">
+                            
+                        </select>
+                        <!---@Html.Label("Contact Person")--->
+                        <!---@Html.DropDownListFor(model => model.PS01017, new SelectList(Model.POC, "Value", "Text"), "--Select--",
+                        htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01015, "", new { @class = "text-danger" })--->
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <select class = "form-control">
+                            
+                        </select>
+                        <!---@Html.Label("Currency")--->
+                        <!---@Html.DropDownListFor(model => model.PS01016, new SelectList(Model.PaymentTerm, "Value", "Text"),
+                        "--Select--", htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01015, "", new { @class = "text-danger" })--->
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <select class = "form-control">
+                            
+                        </select>
+                        <!---@Html.Label("Payment Term")--->
+                        <!---@Html.DropDownListFor(model => model.PS01010, new SelectList(Model.Currency, "Value", "Text"),
+                        "--Select--", htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01015, "", new { @class = "text-danger" })--->
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01018)--->
+                        <!---@Html.TextBoxFor(model => model.PS01018, htmlAttributes: new { @class = "form-control", maxlength = 15,
+                        autocomplete = "off" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01018, "", new { @class = "text-danger" })--->
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01019)--->
+                        <!---@Html.TextBoxFor(model => model.PS01019, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01019, "", new { @class = "text-danger" })--->
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01020)--->
+                        <!---@Html.TextBoxFor(model => model.PS01020, htmlAttributes: new { @class = "form-control", maxlength = 35,
+                        autocomplete = "off" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01020, "", new { @class = "text-danger" })--->
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01009)--->
+                        <!---@Html.TextBoxFor(model => model.PS01009, htmlAttributes: new { @class = "form-control" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01009, "", new { @class = "text-danger" })--->
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01021)--->
+                        <!---@Html.TextBoxFor(model => model.PS01021, htmlAttributes: new { @class = "form-control", maxlength = 25,
+                        autocomplete = "off" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01021, "", new { @class = "text-danger" })--->
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <select class = "form-control">
+                            
+                        </select>
+                        <!---@Html.Label("Delivery Location")--->
+                        <!---@Html.DropDownListFor(model => model.PS01039, new SelectList(Model.DelivLlocation, "Value", "Text"),
+                        "--Select--", htmlAttributes: new { @class = "form-control" })--->
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control">
+                        <!---@Html.LabelFor(model => model.PS01022)--->
+                        <!---@Html.TextBoxFor(model => model.PS01022, htmlAttributes: new { @class = "form-control", maxlength = 100,
+                        autocomplete = "off" })--->
+                        <!---@Html.ValidationMessageFor(model => model.PS01022, "", new { @class = "text-danger" })--->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div>
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
