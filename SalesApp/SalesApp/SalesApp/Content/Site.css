@@ -23,6 +23,10 @@ textarea {
     max-width: 280px;
 }
 
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 2px 1px #719ECE !important;
+}
+
 #orange-hover a:hover {
     color: orange;
 }
