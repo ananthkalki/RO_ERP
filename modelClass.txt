@@ -4,6 +4,7 @@ public class RFQModel
         [Display(Name = "RFQ Number")]
         [StringLength(10)]
         public string PS01001 { get; set; }
+
         [Display(Name = "RFQ Date")]
         [Required(ErrorMessage = "Please enter RFQ date.")]
         public DateTime PS01006 { get; set; }
