@@ -6,16 +6,17 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/font-awesome.min.css")
+    @Styles.Render("~/Content/jquery-jvectormap.css")
+    @Styles.Render("~/Content/AdminLTE.min.css")
+    @Styles.Render("~/Content/skins/_all-skins.min.css")
+    @Styles.Render("~/Content/Site.css")
 
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-        @Styles.Render("~/Content/font-awesome.min.css")
-        @Styles.Render("~/Content/jquery-jvectormap.css")
-        @Styles.Render("~/Content/AdminLTE.min.css")
-        @Styles.Render("~/Content/skins/_all-skins.min.css")
-        @Styles.Render("~/Content/Site.css")
+
 
         <header class="main-header">
 
@@ -149,7 +150,7 @@
         </aside>
 
 
-        <div class="content-wrapper padding-30">
+        <div class="content-wrapper padding-left-30">
             @RenderBody()
         </div>
 
