@@ -54,3 +54,11 @@ input:focus, select:focus, textarea:focus {
 .border-radius-3 {
     border-radius: 3px;
 }
+
+.bg-green{
+    background-color:green;
+}
+
+.bg-red{
+    background-color:red;
+}

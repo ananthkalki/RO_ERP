@@ -759,15 +759,16 @@ a:focus {
     .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>.treeview-menu {
         display: block !important;
         position: absolute;
-        width: 180px;
+        width: 220px;
         left: 50px
     }
 
     .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>a>span {
         top: 0;
         margin-left: -3px;
-        padding: 12px 5px 12px 20px;
-        background-color: inherit
+        padding: 15px 5px 18px 20px;
+        background-color: inherit;
+        font-size:13px;
     }
 
     .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>a>.pull-right-container {
