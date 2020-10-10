@@ -36,11 +36,15 @@ input:focus, select:focus, textarea:focus {
 }
 
 .padding-left-30 {
-    padding-left: 30px;
+    padding-left: 30px !important;
 }
 
-.padding-top-20 {
-    padding-top: 20px;
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+.padding-top-23 {
+    padding-top: 23px;
 }
 
 .padding-1 {
@@ -61,4 +65,45 @@ input:focus, select:focus, textarea:focus {
 
 .bg-red{
     background-color:red;
+}
+
+
+@media (min-width: 360px) {
+    .width- {
+        min-height: 60px;
+    }
+
+    .btn {
+        width: 250px !important;
+    }
+}
+
+
+
+@media (min-width: 768px) {
+    .width-{
+       min-height:60px;
+    }
+    .btn{
+        width:250px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .width- {
+        min-height:30px !important;
+    }
+    .btn {
+        width: 150px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .width- {
+        max-width: 720px !important;
+
+    }
+    .btn {
+        width: 100px !important;
+    }
 }
