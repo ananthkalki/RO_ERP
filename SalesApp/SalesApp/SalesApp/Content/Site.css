@@ -55,12 +55,20 @@ input:focus, select:focus, textarea:focus {
     margin: 3px;
 }
 
+.margin-right-10{
+    margin-right:10px !important;
+}
+
 .margin-right-0{
     margin-right:0px;
 }
 
 .padding-right-0{
     padding-right:0px;
+}
+
+.padding-right-10 {
+    padding-right: 10px !important;
 }
 
 .border-radius-3 {
@@ -86,13 +94,7 @@ input:focus, select:focus, textarea:focus {
     width:100px;
 }
 
-table tr:last-child td:first-child {
-    border-bottom-left-radius: 10px;
-}
 
-table tr:last-child td:last-child {
-    border-bottom-right-radius: 10px;
-}
 
 @media (min-width: 360px) {
     .width-half{
@@ -103,6 +105,12 @@ table tr:last-child td:last-child {
     }
 }
 
+table {
+    border-collapse: collapse !important;
+    border-radius: 30px !important;
+    border-style: hidden !important; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 1px #666 !important; /* this draws the table border  */
+}
 
 
 @media (min-width: 768px) {

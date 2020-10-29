@@ -3005,9 +3005,12 @@ th {
 }
 
 .table {
-    width: 100%;
-    max-width: 100%;
+    width: 95%;
+    max-width: 95%;
     margin-bottom: 20px;
+    border-radius: 6px !important;
+    border-style: hidden !important; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 1px #666 !important;
 }
 
     .table > thead > tr > th,
@@ -3055,7 +3058,7 @@ th {
 
 .table-bordered {
     border: 1px solid #999 !important;
-    border-radius: 15px !important;
+    border-style: hidden !important;
 }
 
     .table-bordered > thead > tr > th,
