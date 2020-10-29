@@ -16,17 +16,17 @@ namespace SalesApp.Controllers
             List<SelectListItem> items = new List<SelectListItem>();
             items.Add(new SelectListItem
             {
-                Text = "Arjun",
+                Text = "dummy1",
                 Value = "164"
             });
             items.Add(new SelectListItem
             {
-                Text = "Sreekanth",
+                Text = "dummy2",
                 Value = "370"
             });
             items.Add(new SelectListItem
             {
-                Text = "Edwin",
+                Text = "dummy3",
                 Value = "187"
             });
             RM.PS02013 = "370";
