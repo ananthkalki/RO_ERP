@@ -5,158 +5,67 @@
 
 @using (Html.BeginForm())
 {
-    <div class="form-horizontal">
-        <br />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
+<div class="form-horizontal">
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
 
-                    @Html.LabelFor(model => model.PS02001)
-                    @Html.TextBoxFor(model => model.PS02001, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
-                    @Html.ValidationMessageFor(model => model.PS02001, "", new { @class = "text-danger " })
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="form-group">
-
-                    @Html.LabelFor(model => model.PS02006)
-                    @Html.TextBoxFor(model => model.PS02006, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3", @onchange = "addDate(this)" })
-                    @Html.ValidationMessageFor(model => model.PS02006, "", new { @class = "text-danger" })
-                </div>
-
+                @Html.LabelFor(model => model.PS02001)
+                @Html.TextBoxFor(model => model.PS02001, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                @Html.ValidationMessageFor(model => model.PS02001, "", new { @class = "text-danger " })
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.PS02007)
-                    @Html.TextBoxFor(model => model.PS02007, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3", @id = "todate" })
-                    @Html.ValidationMessageFor(model => model.PS02007, "", new { @class = "text-danger" })
-                </div>
+        <div class="col-md-4">
+            <div class="form-group">
 
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.PS02008)
-                    @Html.TextBoxFor(model => model.PS02008, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3", @id = "todate" })
-                    @Html.ValidationMessageFor(model => model.PS02008, "", new { @class = "text-danger" })
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.Label("CS Person")
-                    @Html.DropDownListFor(model => model.PS02013, new SelectList(Model.CSPerson, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
-                    @Html.ValidationMessageFor(model => model.PS02013, "", new { @class = "text-danger" })
-
-                </div>
-
+                @Html.LabelFor(model => model.SL01002)
+                @Html.TextBoxFor(model => model.SL01002, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                @Html.ValidationMessageFor(model => model.SL01002, "", new { @class = "text-danger " })
             </div>
         </div>
-        <div class="row">
+    </div>
 
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.Label("Procurement Person")
-                    @Html.DropDownListFor(model => model.PS02014, new SelectList(Model.ProcurePerson, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
-                    @Html.ValidationMessageFor(model => model.PS02014, "", new { @class = "text-danger" })
-
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.Label("Sales Person")
-                    @Html.DropDownListFor(model => model.PS02012, new SelectList(Model.SalesPerson, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
-                    @Html.ValidationMessageFor(model => model.PS02012, "", new { @class = "text-danger" })
-
-                </div>
-
-            </div>
-
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.Label("Team Lead")
-                    @Html.DropDownListFor(model => model.PS02015, new SelectList(Model.TeamLead, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
-                    @Html.ValidationMessageFor(model => model.PS02015, "", new { @class = "text-danger" })
-
-                </div>
-
-            </div>
-
+    <div class="row">
+         <div class="col-md-12 padding-top-23 padding-left-0">
+            <table class="table table-bordered table-responsive text-center">
+                <thead class="bg-light-blue">
+                    <tr>
+                        <th scope="col" class="number-cell">SI NO</th>
+                        <th scope="col" class="desc-cell">Item</th>
+                        <th scope="col" class="number-cell">Quantity</th>
+                        <th scope="col" class="number-cell">UOM</th>
+                        <th scope="col" class="desc2-cell">Existing Item</th>
+                        <th scope="col" class="number-cell">Pur.Price </th>
+                        <th scope="col" class="name-cell">Vendor </th>
+                        <th scope="col" class="radio-cell"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox" /></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+    </div>
+
+    <div class="top-bottom-bordered">
         <div class="row">
-            <div class="col-lg-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.PS02030)
-                    @Html.HiddenFor(model => model.PS02003)
-                    @Html.EditorFor(model => model.PS02030, new { htmlAttributes = new { @class = "form-control margin-3 border-radius-3", maxlength = 40 } })
-                    @Html.TextBoxFor(model => model.PS02030, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                    @Html.TextBoxFor(model => model.PS02031, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                    @Html.TextBoxFor(model => model.PS02032, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                    @Html.TextBoxFor(model => model.PS02033, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                </div>
-
-            </div>
-            <div class="col-lg-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.PS02034)
-                    @Html.HiddenFor(model => model.PS02004)
-                    @Html.EditorFor(model => model.PS02034, new { htmlAttributes = new { @class = "form-control margin-3 border-radius-3", maxlength = 40 } })
-                    @Html.TextBoxFor(model => model.PS02034, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                    @Html.TextBoxFor(model => model.PS02035, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                    @Html.TextBoxFor(model => model.PS02036, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                    @Html.TextBoxFor(model => model.PS02037, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                </div>
-
-            </div>
-            <div class="col-lg-4">
-                <div class="form-group margin-3 border-radius-3">
-                    @Html.LabelFor(model => model.PS02023)
-                    @Html.HiddenFor(model => model.PS02005)
-                    @Html.EditorFor(model => model.PS02023, new { htmlAttributes = new { @class = "form-control margin-3 border-radius-3", maxlength = 40 } })
-                    @Html.TextBoxFor(model => model.PS02023, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                    @Html.TextBoxFor(model => model.PS02024, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                    @Html.TextBoxFor(model => model.PS02025, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                    @Html.TextBoxFor(model => model.PS02026, htmlAttributes: new { @class = "form-control margin-3 border-radius-3", maxlength = 35, autocomplete = "off" })
-                </div>
-
-            </div>
+            <h3>Vendor Search</h3>
         </div>
+
         <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.Label("Contact Person")
-                    @Html.DropDownListFor(model => model.PS02017, new SelectList(Model.POC, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
-                    @Html.ValidationMessageFor(model => model.PS02015, "", new { @class = "text-danger" })
-
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.Label("Currency")
-                    @Html.DropDownListFor(model => model.PS02016, new SelectList(Model.PaymentTerm, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
-                    @Html.ValidationMessageFor(model => model.PS02015, "", new { @class = "text-danger" })
-
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.Label("Payment Term")
-                    @Html.DropDownListFor(model => model.PS02010, new SelectList(Model.Currency, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
-                    @Html.ValidationMessageFor(model => model.PS02015, "", new { @class = "text-danger" })
-
-                </div>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="form-group">
                     @Html.LabelFor(model => model.PS02018)
                     @Html.TextBoxFor(model => model.PS02018, htmlAttributes: new { @class = "form-control border-radius-3", maxlength = 15, autocomplete = "off" })
@@ -165,7 +74,7 @@
 
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="form-group">
                     @Html.LabelFor(model => model.PS02019)
                     @Html.TextBoxFor(model => model.PS02019, htmlAttributes: new { @class = "form-control border-radius-3", maxlength = 35, autocomplete = "off" })
@@ -173,48 +82,13 @@
                 </div>
 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="form-group">
                     @Html.LabelFor(model => model.PS02020)
                     @Html.TextBoxFor(model => model.PS02020, htmlAttributes: new { @class = "form-control border-radius-3", maxlength = 35, autocomplete = "off" })
                     @Html.ValidationMessageFor(model => model.PS02020, "", new { @class = "text-danger" })
                 </div>
 
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.PS02009)
-                    @Html.TextBoxFor(model => model.PS02009, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3" })
-                    @Html.ValidationMessageFor(model => model.PS02009, "", new { @class = "text-danger" })
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.PS02021)
-                    @Html.TextBoxFor(model => model.PS02021, htmlAttributes: new { @class = "form-control border-radius-3", maxlength = 25, autocomplete = "off" })
-                    @Html.ValidationMessageFor(model => model.PS02021, "", new { @class = "text-danger" })
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.Label("Delivery Location")
-                    @Html.DropDownListFor(model => model.PS02039, new SelectList(Model.DelivLlocation, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-7">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.PS02022)
-                    @Html.TextAreaFor(model => model.PS02022, htmlAttributes: new { @class = "form-control border-radius-3 width-", maxlength = 100, autocomplete = "off", })
-                    @Html.ValidationMessageFor(model => model.PS02022, "", new { @class = "text-danger" })
-                </div>
             </div>
 
             <div class="col-md-1 padding-top-23 padding-left-30">
@@ -224,24 +98,111 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-1 padding-top-23 padding-left-30">
-                <div class="form-group">
-                    <div>
-                        <button type="submit" value="Clear" class="btn bg-red">Clear</button>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-md-12 padding-top-23 padding-left-0">
+                <table class="table table-bordered table-responsive text-center">
+                    <thead class="bg-light-blue">
+                        <tr>
+                            <th scope="col" class="name-cell">Vendor Name</th>
+                            <th scope="col" class="name-cell">Category</th>
+                            <th scope="col" class="name-cell">Rating</th>
+                            <th scope="col" class="name-cell">Payment Terms</th>
+                            <th scope="col" class="name-cell">Currency </th>
+                            <th scope="col" class="name-cell">Balance</th>
+                            <th scope="col" class="radio-cell"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="checkbox" /></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+        </div>
 
-            <div class="col-md-1 padding-top-23 padding-left-30">
-                <div class="form-group  ">
-                    <div>
-                        <button type="submit" value="Create" class="btn bg-green"><i class="fa fa-plus"></i></button>
-                    </div>
-                </div>
+    </div>
+
+    <div class="row">
+         <div class="col-md-12 padding-top-23 padding-left-0">
+            <table class="table table-bordered table-responsive text-center">
+                <thead class="bg-light-blue">
+                    <tr>
+                        <th scope="col" class="number-cell">Line Item</th>
+                        <th scope="col" class="desc-cell">Description</th>
+                        <th scope="col" class="number-cell">Quantity</th>
+                        <th scope="col" class="number-cell">UOM</th>
+                        <th scope="col" class="name-cell">Vendor</th>
+                        <th scope="col" class="btn-cell"> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="submit" value="Clear" class="btn bg-red">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 ">
+            <div class="form-group">
+                @Html.Label("Vendor")
+                @Html.DropDownListFor(model => model.PS02013, new SelectList(Model.Vendor, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
+                @Html.ValidationMessageFor(model => model.PS02013, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="form-group">
+                @Html.LabelFor(model => model.PS02022)
+                @Html.TextAreaFor(model => model.PS02022, htmlAttributes: new { @class = "form-control border-radius-3 width-half", maxlength = 100, autocomplete = "off", })
+                @Html.ValidationMessageFor(model => model.PS02022, "", new { @class = "text-danger" })
             </div>
         </div>
     </div>
+
+    <div class="row">
+         <div class="col-md-12 padding-top-23 padding-left-0">
+            <table class="table table-bordered table-responsive text-center">
+                <thead class="bg-light-blue">
+                    <tr>
+                        <th scope="col" class="number-cell">Line Item</th>
+                        <th scope="col" class="desc-cell">Description</th>
+                        <th scope="col" class="number-cell">Quantity</th>
+                        <th scope="col" class="number-cell">UOM</th>
+                        <th scope="col" class="name-cell">Vendor</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
 
 
 
