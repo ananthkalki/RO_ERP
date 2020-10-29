@@ -3054,7 +3054,8 @@ th {
 }
 
 .table-bordered {
-    border: 1px solid #ddd;
+    border: 1px solid #999 !important;
+    border-radius: 15px !important;
 }
 
     .table-bordered > thead > tr > th,
@@ -3063,7 +3064,7 @@ th {
     .table-bordered > thead > tr > td,
     .table-bordered > tbody > tr > td,
     .table-bordered > tfoot > tr > td {
-        border: 1px solid #ddd;
+        border: 1px solid #999 !important;
     }
 
     .table-bordered > thead > tr > th,

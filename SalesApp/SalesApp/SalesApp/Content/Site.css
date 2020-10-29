@@ -55,6 +55,14 @@ input:focus, select:focus, textarea:focus {
     margin: 3px;
 }
 
+.margin-right-0{
+    margin-right:0px;
+}
+
+.padding-right-0{
+    padding-right:0px;
+}
+
 .border-radius-3 {
     border-radius: 3px;
 }
@@ -68,11 +76,28 @@ input:focus, select:focus, textarea:focus {
 }
 
 
+.desc-cell{
+    width:550px;
+}
+.number-cell{
+    width:100px;
+}
+.btn-cell{
+    width:100px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
 @media (min-width: 360px) {
-    .width- {
+    .width-half{
         min-height: 60px;
     }
-
     .btn {
         width: 250px !important;
     }
@@ -81,7 +106,7 @@ input:focus, select:focus, textarea:focus {
 
 
 @media (min-width: 768px) {
-    .width-{
+    .width-half{
        min-height:60px;
     }
     .btn{
@@ -90,7 +115,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 @media (min-width: 992px) {
-    .width- {
+    .width-half {
         min-height:30px !important;
     }
     .btn {
@@ -99,9 +124,11 @@ input:focus, select:focus, textarea:focus {
 }
 
 @media (min-width: 1200px) {
-    .width- {
+    .width-half {
         max-width: 720px !important;
-
+    }
+    .width-full {
+        max-width: 1000px !important;
     }
     .btn {
         width: 100px !important;

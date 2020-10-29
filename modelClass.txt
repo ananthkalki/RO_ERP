@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace SalesApp.Models
-{
-    public class RFQModel
+public class RFQModel
     {
+        
         [Display(Name = "RFQ Number")]
         [StringLength(10)]
         public string PS01001 { get; set; }
+
         [Display(Name = "RFQ Date")]
         [Required(ErrorMessage = "Please enter RFQ date.")]
         public DateTime PS01006 { get; set; }
@@ -146,18 +139,8 @@ namespace SalesApp.Models
         [Display(Name = "Remarks")]
         public string PS01022 { get; set; }
 
-        [StringLength(100)]
-        [Display(Name = "Description")]
-        public string PS03004 { get; set; }
-                
-        [Display(Name = "RFQ Quantity")]
-        public int PS03005 { get; set; }
-        
-        [Display(Name = "UOM Code")]
-        public int PS03006 { get; set; }
-
-
         public List<SelectListItem> CSPerson = new List<SelectListItem>();
+
         public List<SelectListItem> ProcurePerson = new List<SelectListItem>();
         public List<SelectListItem> SalesPerson = new List<SelectListItem>();
         public List<SelectListItem> TeamLead = new List<SelectListItem>();
@@ -168,6 +151,4 @@ namespace SalesApp.Models
 
 
 
-
     }
-}

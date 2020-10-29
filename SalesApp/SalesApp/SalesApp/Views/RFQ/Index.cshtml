@@ -5,10 +5,10 @@
 
 @using (Html.BeginForm())
 {
-    <div class="form-horizontal">
-        <br />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="row">
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <div class="form-horizontal">
             <div class="col-md-4">
                 <div class="form-group">
 
@@ -22,7 +22,7 @@
                 <div class="form-group">
 
                     @Html.LabelFor(model => model.PS01006)
-                    @Html.TextBoxFor(model => model.PS01006, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3" })
+                    @Html.TextBoxFor(model => model.PS01006, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3", @onchange = "addDate(this)" })
                     @Html.ValidationMessageFor(model => model.PS01006, "", new { @class = "text-danger" })
                 </div>
 
@@ -33,7 +33,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.PS01007)
-                    @Html.TextBoxFor(model => model.PS01007, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3" })
+                    @Html.TextBoxFor(model => model.PS01007, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3", @id = "todate" })
                     @Html.ValidationMessageFor(model => model.PS01007, "", new { @class = "text-danger" })
                 </div>
 
@@ -41,7 +41,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.PS01008)
-                    @Html.TextBoxFor(model => model.PS01008, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3" })
+                    @Html.TextBoxFor(model => model.PS01008, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3", @id = "todate" })
                     @Html.ValidationMessageFor(model => model.PS01008, "", new { @class = "text-danger" })
                 </div>
 
@@ -212,7 +212,7 @@
             <div class="col-md-7">
                 <div class="form-group">
                     @Html.LabelFor(model => model.PS01022)
-                    @Html.TextAreaFor(model => model.PS01022, htmlAttributes: new { @class = "form-control border-radius-3 width-", maxlength = 100, autocomplete = "off",})
+                    @Html.TextAreaFor(model => model.PS01022, htmlAttributes: new { @class = "form-control border-radius-3 width-half", maxlength = 100, autocomplete = "off", })
                     @Html.ValidationMessageFor(model => model.PS01022, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -220,7 +220,7 @@
             <div class="col-md-1 padding-top-23 padding-left-30">
                 <div class="form-group">
                     <div>
-                        <button type="submit" value="Save" class="btn btn-primary"  >Save</button>
+                        <button type="submit" value="Save" class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </div>
@@ -228,11 +228,11 @@
             <div class="col-md-1 padding-top-23 padding-left-30">
                 <div class="form-group">
                     <div>
-                        <button type="submit" value="Clear" class="btn bg-red" >Clear</button>
+                        <button type="submit" value="Clear" class="btn bg-red">Clear</button>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-1 padding-top-23 padding-left-30">
                 <div class="form-group  ">
                     <div>
@@ -241,7 +241,67 @@
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="row">
+            <h2 class="padding-left-10">Line Items</h2>
+        </div>
+
+        <div class=" row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PS03004)
+                    @Html.TextAreaFor(model => model.PS03004, htmlAttributes: new { @class = "form-control border-radius-3 width-full", maxlength = 300, autocomplete = "off", })
+                    @Html.ValidationMessageFor(model => model.PS03004, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PS03005)
+                    @Html.TextBoxFor(model => model.PS03005, htmlAttributes: new { @class = "form-control border-radius-3", maxlength = 25, autocomplete = "off" })
+                    @Html.ValidationMessageFor(model => model.PS03005, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.Label("UOM")
+                    @Html.DropDownListFor(model => model.PS03006, new SelectList(Model.DelivLlocation, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 padding-top-23">
+                <table class="table table-bordered table-responsive">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col" class="number-cell">Line Item</th>
+                            <th scope="col" class="desc-cell">Description</th>
+                            <th scope="col" class="number-cell">Quantity</th>
+                            <th scope="col" class="number-cell">UOM</th>
+                            <th scope="col" class="btn-cell"> </th>
+                            <th scope="col" class="btn-cell"> </th>
+                            <th scope="col" class="btn-cell"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><button type="submit" value="Save" class="btn btn-primary">Edit</button></td>
+                            <td><button type="submit" value="Clear" class="btn bg-red">Delete</button></td>
+                            <td><button type="submit" value="Create" class="btn bg-green">Insert</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+        </div>
+    </div>
 
 }
