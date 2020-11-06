@@ -1,0 +1,37 @@
+﻿@model SalesApp.Models.VPDModel
+@{
+    ViewBag.Title = "VPD Header";
+}
+
+@using (Html.BeginForm())
+{
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <div class="form-horizontal">
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.vpd1)
+                    @Html.TextBoxFor(model => model.vpd1, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.vpd1, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="form-group">
+                    @Html.Label("Vendor")
+                    @Html.DropDownListFor(model => model.PS02013, new SelectList(Model.Vendor, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PS02013, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="form-group">
+                    @Html.Label("Currency")
+                    @Html.DropDownListFor(model => model.vpd2, new SelectList(Model.Currency, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.vpd2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+}

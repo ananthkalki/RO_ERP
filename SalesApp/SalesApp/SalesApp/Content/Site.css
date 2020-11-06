@@ -43,6 +43,10 @@ input:focus, select:focus, textarea:focus {
     padding-left: 10px !important;
 }
 
+.padding-left-15 {
+    padding-left: 15px !important;
+}
+
 .padding-top-23 {
     padding-top: 23px;
 }
