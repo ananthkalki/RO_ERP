@@ -7,8 +7,9 @@
 {
     <br />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="row">
-        <div class="form-horizontal">
+    <div class="form-horizontal">
+        <div class="row">
+
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.vpd1)
@@ -33,36 +34,36 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12 padding-top-23 padding-left-0">
-            <table class="table table-bordered table-responsive text-center">
-                <thead class="bg-light-blue">
-                    <tr>
-                        <th scope="col" class="number-cell">SI NO</th>
-                        <th scope="col" class="desc-cell">Description</th>
-                        <th scope="col" class="number-cell">Quantity</th>
-                        <th scope="col" class="number-cell">UOM</th>
-                        <th scope="col" class="desc-cell">Item Offered Description</th>
-                        <th scope="col" class="number-cell">Unit Cost </th>
-                        <th scope="col" class="number-cell">Line Cost </th>
+        <div class="row">
+            <div class="col-md-12 padding-top-23 padding-left-0">
+                <table class="table table-bordered table-responsive text-center">
+                    <thead class="bg-light-blue">
+                        <tr>
+                            <th scope="col" class="number-cell">SI NO</th>
+                            <th scope="col" class="desc-cell">Description</th>
+                            <th scope="col" class="number-cell">Quantity</th>
+                            <th scope="col" class="number-cell">UOM</th>
+                            <th scope="col" class="desc-cell">Item Offered Description</th>
+                            <th scope="col" class="number-cell">Unit Cost </th>
+                            <th scope="col" class="number-cell">Line Cost </th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
 
-                    </tr>
-                </tbody>
-            </table>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="row">
@@ -132,6 +133,6 @@
                 </div>
             </div>
         </div>
-    </div>
+   </div> 
 
  }
