@@ -34,4 +34,104 @@
             </div>
         </div>
     </div>
-}
+
+    <div class="row">
+        <div class="col-md-12 padding-top-23 padding-left-0">
+            <table class="table table-bordered table-responsive text-center">
+                <thead class="bg-light-blue">
+                    <tr>
+                        <th scope="col" class="number-cell">SI NO</th>
+                        <th scope="col" class="desc-cell">Description</th>
+                        <th scope="col" class="number-cell">Quantity</th>
+                        <th scope="col" class="number-cell">UOM</th>
+                        <th scope="col" class="desc-cell">Item Offered Description</th>
+                        <th scope="col" class="number-cell">Unit Cost </th>
+                        <th scope="col" class="number-cell">Line Cost </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.vdp3)
+                    @Html.TextBoxFor(model => model.vdp3, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.vdp3, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.vdp4)
+                    @Html.TextBoxFor(model => model.vdp4, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.vdp4, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.vdp5)
+                    @Html.TextBoxFor(model => model.vdp5, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3", @onchange = "addDate(this)" })
+                    @Html.ValidationMessageFor(model => model.vdp5, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.vdp6)
+                    @Html.TextBoxFor(model => model.vdp6, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.vdp6, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.vdp7)
+                    @Html.TextBoxFor(model => model.vdp7, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.vdp7, "", new { @class = "text-danger " })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.vdp8)
+                    @Html.TextAreaFor(model => model.vdp8, htmlAttributes: new { @class = "form-control border-radius-3 width-half", maxlength = 100, autocomplete = "off", })
+                    @Html.ValidationMessageFor(model => model.vdp8, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-5 padding-top-23 padding-left-30">
+                <div class="form-group">
+                    <div>
+                        <button type="submit" value="Save" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ }

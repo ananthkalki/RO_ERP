@@ -21,6 +21,30 @@ namespace SalesApp.Models
         [StringLength(35)]
         public string vpd2 { get; set; }
 
+        [Display(Name = "Domestic Freight")]
+        [StringLength(15)]
+        public string vdp3 { get; set; }
+
+        [Display(Name = "Deliver To")]
+        [StringLength(15)]
+        public string vdp4 { get; set; }
+
+        [Display(Name = "Valid Upto")]
+        [Required(ErrorMessage = "Please enter Price by date.")]
+        public DateTime vdp5 { get; set; }
+
+        [Display(Name = "Stock Availability")]
+        [StringLength(15)]
+        public string vdp6 { get; set; }
+
+        [Display(Name = "Lead Time")]
+        [StringLength(15)]
+        public string vdp7 { get; set; }
+
+        [StringLength(100)]
+        [Display(Name = "Remarks")]
+        public string vdp8 { get; set; }
+
         public List<SelectListItem> Vendor = new List<SelectListItem>();
         public List<SelectListItem> Currency = new List<SelectListItem>();
 
