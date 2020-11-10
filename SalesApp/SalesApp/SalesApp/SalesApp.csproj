@@ -120,13 +120,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\FRTController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PMController.cs" />
     <Compile Include="Controllers\RFQController.cs" />
     <Compile Include="Controllers\VPDController.cs" />
     <Compile Include="Controllers\VPRController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\PMModel.cs" />
+    <Compile Include="Models\FRTModel.cs" />
     <Compile Include="Models\RFQModel.cs" />
     <Compile Include="Models\VPDModel.cs" />
     <Compile Include="Models\VPRModel.cs" />
@@ -168,6 +172,7 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\VPD\Index.cshtml" />
     <Content Include="Views\RFQ\LineItems.cshtml" />
+    <Content Include="Views\FRT\Index.cshtml" />
     <None Include="Views\VPR\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -187,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\PM\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
