@@ -1,7 +1,7 @@
 ﻿@model SalesApp.Models.FRTModel
 
 @{
-    ViewBag.Title = "RFQ Header";
+    ViewBag.Title = "FRT Header";
 }
 
 @using (Html.BeginForm())
@@ -34,7 +34,7 @@
 
             <div class="col-md-4">
                 <div class="form-group">
-                    @Html.Label("CS Person")
+                    @Html.Label("Delivery Method")
                     @Html.DropDownListFor(model => model.FRT3, new SelectList(Model.Delivery_Method, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
                     @Html.ValidationMessageFor(model => model.FRT3, "", new { @class = "text-danger" })
 
@@ -44,7 +44,7 @@
 
             <div class="col-md-4">
                 <div class="form-group">
-                    @Html.Label("CS Person")
+                    @Html.Label("Currency")
                     @Html.DropDownListFor(model => model.FRT4, new SelectList(Model.Currency, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
                     @Html.ValidationMessageFor(model => model.FRT4, "", new { @class = "text-danger" })
 
@@ -58,7 +58,7 @@
 
             <div class="col-md-4">
                 <div class="form-group">
-                    @Html.Label("Procurement Person")
+                    @Html.Label("Vendor")
                     @Html.DropDownListFor(model => model.FRT5, new SelectList(Model.Vendor, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
                     @Html.ValidationMessageFor(model => model.FRT5, "", new { @class = "text-danger" })
 
@@ -71,7 +71,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
-                    @Html.Label("Sales Person")
+                    @Html.Label("Source")
                     @Html.DropDownListFor(model => model.FRT6, new SelectList(Model.Source, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
                     @Html.ValidationMessageFor(model => model.FRT6, "", new { @class = "text-danger" })
 
@@ -81,7 +81,7 @@
 
             <div class="col-md-3">
                 <div class="form-group">
-                    @Html.Label("Team Lead")
+                    @Html.Label("Destination")
                     @Html.DropDownListFor(model => model.FRT7, new SelectList(Model.Destination, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
                     @Html.ValidationMessageFor(model => model.FRT7, "", new { @class = "text-danger" })
 

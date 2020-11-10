@@ -173,6 +173,7 @@
     <Content Include="Views\VPD\Index.cshtml" />
     <Content Include="Views\RFQ\LineItems.cshtml" />
     <Content Include="Views\FRT\Index.cshtml" />
+    <Content Include="Views\PM\Index.cshtml" />
     <None Include="Views\VPR\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -192,7 +193,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\PM\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

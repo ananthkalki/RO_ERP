@@ -1,0 +1,271 @@
+﻿@model SalesApp.Models.PMModel
+
+@{
+    ViewBag.Title = "PM Header";
+}
+
+@using (Html.BeginForm())
+{
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM1)
+                    @Html.TextBoxFor(model => model.PM1, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM1, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM2)
+                    @Html.TextBoxFor(model => model.PM2, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM2, "", new { @class = "text-danger " })
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.Label("Currency")
+                    @Html.DropDownListFor(model => model.PM3, new SelectList(Model.Currency, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM3, "", new { @class = "text-danger" })
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PM4)
+                    @Html.TextBoxFor(model => model.PM4, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3", @id = "todate" })
+                    @Html.ValidationMessageFor(model => model.PM4, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM5)
+                    @Html.TextBoxFor(model => model.PM5, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM5, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+            <div class="col-md-2 padding-top-23">
+                <div class="form-group">
+                    <div>
+                        <button type="submit" value="Save" class="btn btn-wide btn-primary">Add Single Picture</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 padding-top-23">
+                <div class="form-group">
+                    <div>
+                        <button type="submit" value="Save" class="btn btn-wide btn-primary">Add multiple Picture</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 padding-top-23">
+                <table class="table table-bordered table-responsive text-center">
+                    <thead class="bg-light-blue">
+                        <tr>
+                            <th scope="col" class="number-cell">Lno</th>
+                            <th scope="col" class="desc2-cell">Name</th>
+                            <th scope="col" class="name-cell">Description</th>
+                            <th scope="col" class="desc-cell">Item Offered</th>
+                            <th scope="col" class="number-cell">Unit</th>
+                            <th scope="col" class="number-cell">Quantity</th>
+                            <th scope="col" class="number-cell">Cost</th>
+                            <th scope="col" class="number-cell">Line Cost</th>
+                            <th scope="col" class="number-cell">Profit%</th>
+                            <th scope="col" class="number-cell">Profit (V)</th>
+                            <th scope="col" class="number-cell">Line Profit(V)</th>
+                            <th scope="col" class="number-cell">Price</th>
+                            <th scope="col" class="number-cell">Line Price</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-gray-active">                          
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.Label("Choose Logo")
+                    @Html.DropDownListFor(model => model.PM6, new SelectList(Model.Logo, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM6, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM7)
+                    @Html.TextBoxFor(model => model.PM7, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM7, "", new { @class = "text-danger " })
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM8)
+                    @Html.TextBoxFor(model => model.PM8, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM8, "", new { @class = "text-danger " })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.Label("INCOTERM")
+                    @Html.DropDownListFor(model => model.PM9, new SelectList(Model.Incoterm, "Value", "Text"), "--Select--", htmlAttributes: new { @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM9, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM10)
+                    @Html.TextBoxFor(model => model.PM10, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM10, "", new { @class = "text-danger " })
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM11)
+                    @Html.TextBoxFor(model => model.PM11, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM11, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM12)
+                    @Html.TextBoxFor(model => model.PM12, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM12, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM13)
+                    @Html.TextBoxFor(model => model.PM13, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM13, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PM14)
+                    @Html.TextBoxFor(model => model.PM14, htmlAttributes: new { @type = "datetime-local", @class = "form-control border-radius-3", @id = "todate" })
+                    @Html.ValidationMessageFor(model => model.PM14, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM15)
+                    @Html.TextBoxFor(model => model.PM15, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM15, "", new { @class = "text-danger " })
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.PM16)
+                    @Html.TextBoxFor(model => model.PM16, htmlAttributes: new { @maxlength = "10", @class = "form-control border-radius-3" })
+                    @Html.ValidationMessageFor(model => model.PM16, "", new { @class = "text-danger " })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PM17)
+                    @Html.TextAreaFor(model => model.PM17, htmlAttributes: new { @class = "form-control border-radius-3 width-half", maxlength = 100, autocomplete = "off", })
+                    @Html.ValidationMessageFor(model => model.PM17, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PM18)
+                    @Html.TextAreaFor(model => model.PM18, htmlAttributes: new { @class = "form-control border-radius-3 width-half", maxlength = 100, autocomplete = "off", })
+                    @Html.ValidationMessageFor(model => model.PM18, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PM19)
+                    @Html.TextAreaFor(model => model.PM19, htmlAttributes: new { @class = "form-control border-radius-3 width-half", maxlength = 100, autocomplete = "off", })
+                    @Html.ValidationMessageFor(model => model.PM19, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+}

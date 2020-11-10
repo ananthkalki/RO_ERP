@@ -63,6 +63,9 @@ input:focus, select:focus, textarea:focus {
     margin-right:10px !important;
 }
 
+.margin-right-30 {
+    margin-right: 30px !important;
+}
 .margin-right-0{
     margin-right:0px;
 }
@@ -168,4 +171,9 @@ table {
     .btn {
         width: 100px !important;
     }
+
+    .btn-wide {
+        width: 150px !important;
+    }
+
 }
