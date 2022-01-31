@@ -1,2 +1,2 @@
 # RO_ERP
- ro erp front end
+ An ERP apllication using ASP.net and visualstudio
